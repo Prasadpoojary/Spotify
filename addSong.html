@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addSongStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="flex">
+        <div class="flex">
+            <img src="./Spotify_logo_without_text.svg" alt="logo" srcset="">
+            <h1>Spotify</h1>
+
+        </div>
+        <nav>
+            <ul class="flex">
+                <li class="search-container"><input type="search" placeholder="Search for Song" name="" id="">
+                    <a href="" class="search"><i class="fa fa-search"></i></a>
+                </li>
+                <li><a href="" class="clicked">Home</a></li>
+                <!-- Once login -->
+                <!-- <li><a href="">Add Song</a></li>
+                <li><a href="">Logout</a></li> -->
+
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+
+        <div class="main-container">
+            <div class="sub-header">
+                <div class="sub-heading">
+                    <h2><span><i class="fa fa-cloud-upload-alt"></i></span> Add Song Here</h2>
+                </div>
+            </div>
+            <div class="container">
+                <form id="form-upload-free-course" action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                    <div class="wrapper">
+                        <input type="text" id="up-name" asp-for="Name" required />
+                        <label for="up-name" id="up-nameLabel">Name</label>
+                    </div>
+        
+                    <div class="wrapper">
+                        <input type="date" a id="up-main-lang" required />
+                        <label for="up-main-lang" id="up-main-langLabel">Date</label>
+                    </div>
+                    <div class="wrapper">
+                       
+                        <select multiple id="up-main-cat" required>
+                            <option value="Sonu">sdfdf</option>
+                            <option value="sdf">sfsdf</option>
+                            <option value="gfg">sdfsdf</option>
+                            <option value="werrt">sdfsdsggdfg</option>
+                            <option value="Sonu">sdfdf</option>
+                            <option value="sdf">sfsdf</option>
+                            <option value="gfg">sdfsdf</option>
+                            <option value="werrt">sdfsdsggdfg</option>
+                        </select>
+                        <label for="up-main-cat" id="up-main-catLabel">Artist</label>    
+                    </div>
+                    <p class="addArtist">Artist not found ? <button type="button">Add Artist</button></p>
+
+                    <div class="wrapper wrapper-file-upload">
+                        <label id="up-book-source-label">Please select Thumbnail image</label>
+                        <input type="file" id="up-book-thumbnail" accept=".jpg" required />
+                    </div>
+                    <div class="signupSubmitWrapper">
+                        <ul class="signup-btn-wrapper flex">
+                            <li><input type="button" class="cancel" value="Cancel"></li>
+                            <li><input type="submit" value="Add"></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="addArtistSection">
+        <div class="main-artist-container">
+            <button class="close"><i class="fa fa-times"></i></button>
+            <div class="container">
+                <form id="form-upload-free-course" action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                    <div class="wrapper">
+                        <input type="text" id="up-name" asp-for="Name" required />
+                        <label for="up-name" id="up-nameLabel">Name</label>
+                    </div>
+        
+                    <div class="wrapper">
+                        <input type="date" a id="up-main-lang" required />
+                        <label for="up-main-lang" id="up-main-langLabel">Date of Birth</label>
+                    </div>
+                    <div class="wrapper textarea-wrapper">
+                        <textarea id="reg-textarea" asp-for="Description" required></textarea>
+                        <label for="reg-textarea" id="reg-textareaLabel">Bio</label>
+                    </div>
+    
+                  
+                    <div class="signupSubmitWrapper">
+                        <ul class="signup-btn-wrapper flex">
+                            <li><input type="button" class="cancel" value="Cancel"></li>
+                            <li><input type="submit" value="Add"></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p>Copyrights, All rights reserverd 2023</p>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,341 @@
+
+section
+{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container
+{
+    min-width:280px;
+}
+
+.sub-header
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sub-header input
+{
+    text-align: center;
+    padding:8px 0px;
+    padding-left:30px;    
+    border:none;
+    outline:none;
+}
+
+.sub-header input::placeholder
+{
+    color:#cdcecf;
+}
+
+.sub-header button
+{
+  
+    background:white;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+.sub-heading
+{
+    padding:20px;
+}
+
+.sub-heading h2
+{
+    color:#636161;
+}
+
+.sub-heading h2 span
+{
+    color:#8d79eb;
+    /* color:#ffc401; */
+    color:#12a53e;
+}
+
+
+form
+{
+    width:300px;
+}
+.container .wrapper{
+    position: relative;
+    height:80px;
+    
+}
+
+.wrapper label{
+    position: absolute;
+    top:35px;
+    font-size: 12px;
+    left:0%;
+    width:300px;
+    color:#a5a5a5e7;
+    transition: .3s ease-in-out;
+}
+.container form{
+    margin-top: 30px;
+}
+
+.wrapper input[type="text"],.wrapper input[type="number"], .wrapper input[type="url"], .wrapper select, .wrapper input[type="date"]{
+    position: absolute;
+    width:300px;
+    top:39%;
+    left:50%;
+    transform: translateX(-50%);
+    padding:5px 10px;
+    border:none;
+    outline:none;
+    border-bottom: 2px solid #12a53e;
+}
+.wrapper input:focus{
+    border-bottom: 1px solid #12a53e;
+}
+
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    visibility: hidden;
+}
+input[type=date]:required:valid::-webkit-datetime-edit {
+    color: black !important;
+}
+
+
+.wrapper input[type="file"]:focus{
+    border:none;
+}
+
+
+input:focus ~ label,
+input:valid ~ label
+{
+    color:#494949;
+   top:14px;
+   font-size:12px;
+   font-weight: 500;
+}
+
+#up-main-catLabel
+{
+    margin-top: -20px;
+}
+
+#reg-textarea:focus ~ label,
+#reg-textarea:valid ~ label{
+    color:#494949;
+   top:14px;
+   margin-left: 0px;
+   font-size:12px;
+   font-weight: 500;
+}
+
+
+
+.textarea-wrapper
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.textarea-wrapper label
+{
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+#reg-textarea
+{
+    width:300px;
+    height:100px;
+    padding:10px;
+    border: 2px solid #12a53e;
+    border-radius: 5px;
+    outline:none;
+    resize: none;
+}
+#reg-textarea:focus{
+    border: 1px solid #4be084;
+}
+
+input::-webkit-calendar-picker-indicator {
+    opacity:1;
+    color:#4be084;
+   
+  }
+
+  input[type="number"]
+  {
+      font-weight: 700;
+  }
+
+  input::-webkit-inner-spin-button
+{
+    display: none;
+}
+
+
+.wrapper-file-upload
+{
+    margin-top: 70px;
+}
+
+input[type="file"]
+{
+   font-size: 11px;
+   color:#7e7da7;
+   border:none;
+}
+
+
+ input::-webkit-file-upload-button
+{
+    border:none;
+    outline:none;
+    padding:8px 10px;
+    background:#2b2b2b;
+    color:white;
+    font-size:12px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+input::-webkit-file-upload-button:hover
+{
+    background:#12a53e;
+}
+
+
+
+.submitWrapper input[type="submit"],.signupSubmitWrapper input[type="submit"],input[type="button"]{
+    background:#12a53e;
+    border:1px solid transparent;
+    color:white;
+    width:100px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding:8px 12px;
+    transition: .3s ease-in-out;
+}
+
+.signup-btn-wrapper .cancel
+{
+    border:1px solid #12a53e;
+    background:#fff;
+    color:#12a53e;
+}
+
+.wrapper input[type="submit"]:hover,.signupSubmitWrapper input[type="submit"]:hover{
+    background:#272727;
+    color:#ffffff;
+    
+    
+
+
+}
+
+input[type="button"]:hover
+{
+    border:none;
+    background:#272727;
+    color:#ffffff;
+    
+}
+
+
+.submitWrapper
+{
+    display:flex;
+    justify-content: center;
+}
+
+
+
+
+.signup-btn-wrapper
+{
+    text-align: left;
+    margin-top: 10px;
+   margin-left: 0px;
+   list-style: none;
+}
+
+
+.addArtist
+{
+    margin-top: 50px;
+}
+
+.addArtist button
+{
+    border:none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    color:#12a53e;
+    font-weight: 700;
+}
+
+.addArtistSection
+{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    background:rgba(0, 0, 0, 0.884);
+}
+
+
+
+.main-artist-container
+{
+    position: relative;
+    background:white;
+    width:500px;
+    border-radius: 15px;
+}
+
+.main-artist-container .container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.close
+{
+    position: absolute;
+    right:25px;
+    top:20px;
+    outline: none;
+    border:none;
+    background:transparent;
+    font-size: 25px;
+    color:#999;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
