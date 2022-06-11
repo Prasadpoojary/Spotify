@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addSongStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="flex">
+        <div class="flex">
+            <img src="./Spotify_logo_without_text.svg" alt="logo" srcset="">
+            <h1>Spotify</h1>
+
+        </div>
+        <nav>
+            <ul class="flex">
+                <li class="search-container"><input type="search" placeholder="Search for Song" name="" >
+                    <a href="" class="search"><i class="fa fa-search"></i></a>
+                </li>
+                <li><a href="" class="clicked">Home</a></li>
+                <!-- Once login -->
+                <!-- <li><a href="">Add Song</a></li>
+                <li><a href="">Logout</a></li> -->
+
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="">
+        <!-- <div class="main-artist-container auth-container">
+            <h2>Sign Up</h2>
+            <div class="container">
+               
+                <form action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                    <div class="wrapper">
+                        <input type="text" id="up-name" asp-for="Name" required />
+                        <label for="up-name" id="up-nameLabel">Name</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="email" id="up-email" asp-for="Name" required />
+                        <label for="up-email" id="up-emailLabel">Email</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="password" id="up-password" asp-for="Name" required />
+                        <label for="up-password" id="up-passwordLabel">Password</label>
+                    </div>
+    
+                  
+                    <div class="signupSubmitWrapper">
+                        <ul class="signup-btn-wrapper flex">
+                            <li><input type="button" class="cancel" value="Cancel"></li>
+                            <li><input type="submit" value="Sign up"></li>
+                        </ul>
+                    </div>
+                    <p class="addArtist">Already Registered ? <button type="button">Login here</button></p>
+
+                </form>
+            </div>
+        </div> -->
+
+        <!-- Login -->
+
+        <div class="main-artist-container auth-container">
+            <h2>Login</h2>
+            <div class="container">
+               
+                <form action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                
+                    <div class="wrapper">
+                        <input type="email" id="up-email" asp-for="Name" required />
+                        <label for="up-email" id="up-emailLabel">Email</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="password" id="up-password" asp-for="Name" required />
+                        <label for="up-password" id="up-passwordLabel">Password</label>
+                    </div>
+    
+                  
+                    <div class="signupSubmitWrapper">
+                        <ul class="signup-btn-wrapper flex">
+                            <li><input type="button" class="cancel" value="Cancel"></li>
+                            <li><input type="submit" value="Login"></li>
+                        </ul>
+                    </div>
+                    <p class="addArtist">New User ? <button type="button">Sign up here</button></p>
+
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p>Copyrights, All rights reserverd 2023</p>
+    </footer>
+</body>
+</html>
+
+

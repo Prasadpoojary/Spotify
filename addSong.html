@@ -18,7 +18,7 @@
         </div>
         <nav>
             <ul class="flex">
-                <li class="search-container"><input type="search" placeholder="Search for Song" name="" id="">
+                <li class="search-container"><input type="search" placeholder="Search for Song" name="">
                     <a href="" class="search"><i class="fa fa-search"></i></a>
                 </li>
                 <li><a href="" class="clicked">Home</a></li>
@@ -39,15 +39,15 @@
                 </div>
             </div>
             <div class="container">
-                <form id="form-upload-free-course" action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                <form  action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
                     <div class="wrapper">
                         <input type="text" id="up-name" asp-for="Name" required />
                         <label for="up-name" id="up-nameLabel">Name</label>
                     </div>
         
                     <div class="wrapper">
-                        <input type="date" a id="up-main-lang" required />
-                        <label for="up-main-lang" id="up-main-langLabel">Date</label>
+                        <input type="date" a id="up-date" required />
+                        <label for="up-date" id="up-dateLabel">Date</label>
                     </div>
                     <div class="wrapper">
                        
@@ -84,18 +84,19 @@
         <div class="main-artist-container">
             <button class="close"><i class="fa fa-times"></i></button>
             <div class="container">
-                <form id="form-upload-free-course" action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
+                <form 
+                 action="/upload/course" method="post" enctype="multipart/form-data" novalidate>
                     <div class="wrapper">
-                        <input type="text" id="up-name" asp-for="Name" required />
-                        <label for="up-name" id="up-nameLabel">Name</label>
+                        <input type="text" id="up-aname" asp-for="Name" required />
+                        <label for="up-aname" id="up-anameLabel">Name</label>
                     </div>
         
                     <div class="wrapper">
-                        <input type="date" a id="up-main-lang" required />
-                        <label for="up-main-lang" id="up-main-langLabel">Date of Birth</label>
+                        <input type="date" a id="up-adob" required />
+                        <label for="up-adob" id="up-adobLabel">Date of Birth</label>
                     </div>
                     <div class="wrapper textarea-wrapper">
-                        <textarea id="reg-textarea" asp-for="Description" required></textarea>
+                        <textarea id="reg-textarea"  required></textarea>
                         <label for="reg-textarea" id="reg-textareaLabel">Bio</label>
                     </div>
     
