@@ -1,0 +1,64 @@
+<app-header></app-header>
+<section>
+  <div class="main-artist-container auth-container" *ngIf="!showLoginForm">
+      <h2>Sign Up</h2>
+      <div class="container">
+
+        <form (ngSubmit)="onRegister(registerData)" nctype="multipart/form-data" #registerData="ngForm">
+          <div class="wrapper">
+                  <input type="text" id="up-name"ngModel name="name" required />
+                  <label for="up-name" id="up-nameLabel">Name</label>
+              </div>
+              <div class="wrapper">
+                  <input type="email" id="up-email" ngModel name="email" required />
+                  <label for="up-email" id="up-emailLabel">Email</label>
+              </div>
+              <div class="wrapper">
+                  <input type="password" id="up-password" ngModel name="password" required />
+                  <label for="up-password" id="up-passwordLabel">Password</label>
+              </div>
+
+
+              <div class="signupSubmitWrapper">
+                  <ul class="signup-btn-wrapper flex">
+                      <li><input type="button" (click)="registerData.reset()" class="cancel" value="Cancel"></li>
+                      <li><input type="submit" [disabled]="!registerData.valid" value="Sign up"></li>
+                  </ul>
+              </div>
+              <p class="addArtist">Already Registered ? <button type="button" (click)="toggleAuthForm()">Login here</button></p>
+
+          </form>
+      </div>
+  </div>
+
+
+  <div class="main-artist-container auth-container" *ngIf="showLoginForm">
+      <h2>Login</h2>
+      <div class="container">
+
+         <form (ngSubmit)="onLogin(loginData)" nctype="multipart/form-data" #loginData="ngForm">
+
+              <div class="wrapper">
+                  <input type="email" ngModel name="email" id="up-email"  required />
+                  <label for="up-email" id="up-emailLabel">Email</label>
+              </div>
+              <div class="wrapper">
+                  <input type="password" ngModel name="password"  id="up-password"  required />
+                  <label for="up-password" id="up-passwordLabel">Password</label>
+              </div>
+
+
+              <div class="signupSubmitWrapper">
+                  <ul class="signup-btn-wrapper flex">
+                      <li><input type="button"  (click)="loginData.reset()"  class="cancel" value="Cancel"></li>
+                      <li><input type="submit" [disabled]="!loginData.valid" value="Login"></li>
+                  </ul>
+              </div>
+              <p class="addArtist">New User ? <button type="button" (click)="toggleAuthForm()">Sign up here</button></p>
+
+          </form>
+      </div>
+  </div>
+
+</section>
+<app-footer></app-footer>

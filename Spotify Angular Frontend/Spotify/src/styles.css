@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body
+{
+  height:100vh;
+}
+
+.flex
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+.container
+{
+    width:100%;
+    min-height: 50vh;
+    padding:30px;
+}
+
+
+
+.songCard,.artistCard
+{
+    background:#000;
+    box-shadow: 0px 0px 12px 0px rgb(223, 220, 220);
+    margin:20px;
+    width:250px;
+    height:300px;
+    border-radius: 10px;
+    position:relative;
+    transition: .3s ease-in-out;
+}
+
+.songCard img, .artistCard img
+{
+    width:250px;
+    height:200px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    transition: .3s ease-in-out;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+
+.songCard:hover,.artistCard:hover
+{
+    background:#fff;
+}
+
+
+
+
+.songCard:hover img, .artistCard:hover img
+{
+    width:130px;
+    height:130px;
+    border-radius: 50%;
+    position: absolute;
+    top:60px;
+    left:10%;
+}
+
+
+
+.songCard .overlay, .artistCard .overlay
+{
+    z-index: 1;
+    padding: 30px 20px;
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 600;
+    background:linear-gradient(to bottom, #00000044, #000);
+    width:100%;
+    height:100%;
+    color:#c5c2c2;
+    position: absolute;
+    border-radius: 10px;
+    top:0px;
+    transition: .3s ease-in-out;
+}
+
+.songCard:hover .overlay,.artistCard:hover .overlay
+{
+    background:transparent;
+    color:#1bc554;
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+
+
+.cardDesc
+{
+    color:#0cb854;
+    z-index: 4;
+    position:absolute;
+    bottom: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    width:250px;
+}
+
+.cardDesc .rate
+{
+    color:#d1a11e;
+}
+
+
+.artist
+{
+    color:#737574;
+    z-index: 4;
+    position:absolute;
+    bottom: 80px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    width:250px;
+}
+
+.songCard:hover .cardDesc,.artistCard:hover .cardDesc
+{
+    color:#000;
+    font-weight: 500;
+}
+
+
+.artistCard .overlay
+{
+    background: linear-gradient(to bottom, #000000c9, #000000);
+}
+
+
+.search
+{
+    position: absolute;
+    color:#09e627;
+    right:10px;
+    top:2px;
+}
+
+
+@media screen and (max-width:500px)
+{
+
+    .search-container
+    {
+        width:100vw;
+        text-align: center;
+        margin:20px 0px ;
+
+    }
+
+    .search-container input
+    {
+        width:70vw;
+        height:30px;
+        border-radius: 25px;
+    }
+
+    .search-container .search
+    {
+        right:5%;
+        margin-top:2px;
+    }
+
+
+
+    .player-container
+    {
+        position: fixed;
+        top:180px;
+        left:50%;
+        transform: translate(-50%);
+        margin-top:20px;
+
+
+
+    }
+}

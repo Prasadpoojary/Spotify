@@ -1,0 +1,78 @@
+.player-container
+{
+    max-width:500px;
+    width:90vw;
+    height:120px;
+    border-radius: 15px;
+    position:sticky;
+    top:50px;
+    left:50px;
+    z-index:6;
+    margin-top: 20px;
+    background:#000000;
+
+}
+
+.player .details
+{
+    color:#fff;
+}
+
+.player .artist-name
+{
+    color:#444343;
+    font-size: 11px;
+    margin:5px;
+}
+
+.player-controlls
+{
+    margin-top: 5px;
+}
+
+.player-controlls a
+{
+    color:#0dec57;
+    font-size: 25px;
+    transition: .3s ease-in-out;
+}
+
+.player-controlls a:hover
+{
+    color:#999;
+}
+
+.player-container .rating button
+{
+    outline:none;
+    border:none;
+    background:transparent;
+    color:#6b6b6b;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.player-container .rating button:hover :not(.rate-action)
+{
+    font-size: 14px;
+}
+
+.player-container .rating .rate-action
+{
+    margin-left: 20px;
+    color:#00e44c;
+    transition: none;
+}
+
+.player-container .rating .star-hover
+{
+    color:#d1a11e;
+}
+
+
+.player-container .rating .rate-action:hover
+{
+    color:white;
+}
+
+
