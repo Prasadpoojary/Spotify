@@ -37,11 +37,6 @@ public class SongController
         return SecurityContextHolder.getContext().getAuthentication().getName();
     }
 
-    @GetMapping("/test")
-    public ResponseEntity<String> testBackend()
-    {
-        return ResponseEntity.ok("{\"message\":\"Springbooot called succcessfully...!\"}");
-    }
 
 
     @PostMapping("/addsong")
@@ -54,9 +49,6 @@ public class SongController
          return this.songService.addSong(new Song(songBody.getName(),songBody.getArtistId(),thumbnailPath,musicPath));
 
     }
-
-
-
 
     @PostMapping("/addartist")
     public ResponseEntity<?> addSong(@RequestBody Artist artist)
@@ -77,8 +69,11 @@ public class SongController
         return this.songService.allSong(search);
     }
 
-
-
+    @GetMapping("/artists")
+    public ResponseEntity<List<Artist>> artists()
+    {
+        return this.songService.artists();
+    }
 
 
     @GetMapping("/allartists")

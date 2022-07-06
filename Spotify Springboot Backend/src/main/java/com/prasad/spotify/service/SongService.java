@@ -80,6 +80,12 @@ public class SongService
         return  new ResponseEntity<>(this.artistRepository.getAllWithRating(),HttpStatus.OK);
     }
 
+    public ResponseEntity<List<Artist>> artists()
+    {
+        return  new ResponseEntity<>(this.artistRepository.findAll(),HttpStatus.OK);
+    }
+
+
     public ResponseEntity<List<Object>> getArtistSongs(int artist)
     {
         return  new ResponseEntity<>(this.songRepository.getArtistSongs(artist),HttpStatus.OK);
