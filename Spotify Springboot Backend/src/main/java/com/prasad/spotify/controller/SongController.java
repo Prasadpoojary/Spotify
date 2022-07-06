@@ -44,7 +44,7 @@ public class SongController
     }
 
 
-    @PostMapping(value = "/addsong")
+    @PostMapping("/addsong")
     public ResponseEntity<?> addSong(@RequestParam("thumbnail") MultipartFile thumbnail, @RequestParam("music") MultipartFile music, @RequestParam("songdata") String songdata) throws JsonProcessingException {
 
         String thumbnailPath=saveFile(thumbnail,"thumbnail");
@@ -67,18 +67,18 @@ public class SongController
     @PostMapping("/rate")
     public ResponseEntity<?> rate(@RequestBody Rating rating)
     {
-        System.out.println("================= rating clled ");
         rating.setUser_id(this.userService.getByUsername(getLoggedUser()).getId());
-        System.out.println("-------------------------");
-        System.out.println(rating);
         return this.songService.rate(rating);
     }
 
     @GetMapping("/allsongs")
-    public ResponseEntity<List<Object>> allSong()
+    public ResponseEntity<List<Object>> allSong(@RequestParam(value = "search",required = false) String search)
     {
-        return this.songService.allSong();
+        return this.songService.allSong(search);
     }
+
+
+
 
 
     @GetMapping("/allartists")

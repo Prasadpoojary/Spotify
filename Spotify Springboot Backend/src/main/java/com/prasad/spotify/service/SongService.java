@@ -51,14 +51,27 @@ public class SongService
 
     public ResponseEntity<?> rate(Rating rating)
     {
+        Rating rate = this.ratingRepository.getBySongAndUser(rating.getSong_id(),rating.getUser_id());
 
-        this.ratingRepository.save(rating);
+        if(rate==null)
+        {
+            this.ratingRepository.save(rating);
+        }
+        else
+        {
+            rate.setRate(rating.getRate());
+            this.ratingRepository.save(rate);
+        }
+
         return  new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    public ResponseEntity<List<Object>> allSong()
+    public ResponseEntity<List<Object>> allSong(String search)
     {
-
+        if(search!=null)
+        {
+            return new ResponseEntity<>(this.songRepository.searchAllSongList(search),HttpStatus.OK);
+        }
         return  new ResponseEntity<>(this.songRepository.allSongList(),HttpStatus.OK);
     }
 
